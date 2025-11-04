@@ -120,6 +120,7 @@ def get_fake_ip():
     return f"{223}.{random.randint(64, 117)}.{random.randint(0, 255)}.{random.randint(0, 255)}"
 
 def login(user, password, fake_ip):
+    print("user========="+{user})
     is_phone = False
     if re.match(r'\d{11}', user):
         is_phone = True
