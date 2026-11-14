@@ -6,7 +6,7 @@ on:
   #pull_request:
   #  branches: [ main ]
   schedule:
-    - cron: '44 0,4,7,10,12,14 * * *'
+    - cron: '13 0,4,7,10,12,14 * * *'
   watch:
     types: started
   workflow_dispatch:
@@ -23,9 +23,9 @@ jobs:
           sudo -E apt-get install zsh -y
           
       - name: 初始化Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v6
         with:
-          python-version: 3.8
+          python-version: "3.10"
           
       - name: 开始
         run: |
